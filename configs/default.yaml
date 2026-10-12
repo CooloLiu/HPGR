@@ -1,0 +1,10 @@
+# All parameters. Single source of truth.
+model:
+  bic_threshold: 10.0                 # local BIC split threshold
+  tau_ll: 10.0                        # log-likelihood gain tolerance
+  use_ball_entropy_weighting: true    # true: entropy-weighted accumulation over all levels; false: final level only
+  max_iterations: 20
+  random_state: 42
+
+data:
+  dir: data/anomaly
