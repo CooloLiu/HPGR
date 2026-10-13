@@ -21,14 +21,16 @@ hpgr/
 
 ## Data
 
-The datasets are the tabular `.mat` files distributed with GBMOD
-(`https://github.com/BELLoney/Outlier-detection`). Each file holds one array: the
-features followed by a label column (`1` = anomaly, `0` = normal). Place them in
-`data/anomaly/`.
+The datasets are the tabular `.mat` files distributed with the public benchmark
+collections they come from: `https://github.com/BELLoney/Outlier-detection` (cited in
+Section 5.1.1 of the paper) for the main benchmark, and the ADBench suite
+(Han et al., 2022) for the additional datasets reported in the response letter. Each
+file holds one array: the features followed by a label column (`1` = anomaly,
+`0` = normal). Place them in `data/anomaly/`.
 
-The `.mat` files are already min-max normalized upstream by GBMOD. This code applies a
-`StandardScaler` fitted on the normal samples only. Training uses the normal samples;
-evaluation uses all samples.
+The files are used exactly as distributed, so no preprocessing script is included.
+This code applies a `StandardScaler` fitted on the normal samples only. Training uses
+the normal samples; evaluation uses all samples.
 
 ## Run
 
